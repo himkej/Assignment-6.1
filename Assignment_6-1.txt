@@ -1,0 +1,13 @@
+1)create database custom;
+use custom;
+set hive.metastore.warehouse.dir;
+set hive.cli.print.current.db=true;
+
+2)create table if not exists temperature_date
+(
+date string,
+zipcode string,
+temperature int,
+)
+row format delimited
+fields terminated by ',';
